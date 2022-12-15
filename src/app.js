@@ -6,11 +6,15 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = () => {
-  document.querySelector(".card").classList.add(generateRandomSimbol());
-  document.querySelector(".card").innerHTML = generateRandomNumber();
+  const num = document.querySelector(".num");
+  const topSim = document.querySelector(".topSim");
+  const botSim = document.querySelector(".botSim");
+  num.innerHTML = generateRandomNumber();
+  topSim.innerHTML = generateRandomSimbol();
+  botSim.innerHTML = topSim.innerHTML;
 };
 
-let generateRandomNumber = () => {
+const generateRandomNumber = () => {
   let numbers = [
     "A",
     "2",
@@ -30,10 +34,11 @@ let generateRandomNumber = () => {
   return numbers[indexNumbers];
 };
 
-let generateRandomSimbol = () => {
-  let simbol = ["diamond", "spade", "heart", "club"];
+const generateRandomSimbol = () => {
+  let simbol = ["♥", "♦", "♠", "♣"];
   let indexSimbol = Math.floor(Math.random() * simbol.length);
   return simbol[indexSimbol];
 };
+
 //write your code here
 console.log("Hello Rigo from the console!");

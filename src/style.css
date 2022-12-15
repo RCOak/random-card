@@ -13,33 +13,16 @@ body {
   border-radius: 20px;
   border: 1px solid black;
   position: relative;
-  &:after {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-size: 80px;
-  }
-  &:before {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 80px;
-  }
-
-  &.spade:before,
-  &.spade::after {
-    content: "\2660";
-  }
-  &.club:before,
-  &.club::after {
-    content: "\2663";
-  }
-  &.heart:before,
-  &.heart::after {
-    content: "\2665";
-  }
-  &.diamond:before,
-  &.diamond::after {
-    content: "\2666";
-  }
+}
+.topSim {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  font-size: 80px;
+}
+.botSim {
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+  font-size: 80px;
 }
