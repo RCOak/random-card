@@ -10,8 +10,15 @@ window.onload = () => {
   const topSim = document.querySelector(".topSim");
   const botSim = document.querySelector(".botSim");
   num.innerHTML = generateRandomNumber();
-  topSim.innerHTML = generateRandomSimbol();
-  botSim.innerHTML = topSim.innerHTML;
+  const simbol = generateRandomSimbol();
+  topSim.innerHTML = simbol;
+  botSim.innerHTML = simbol;
+  //if (simbol === "♥" || simbol === "♦")
+  if (["♥", "♦"].includes(simbol)) {
+    topSim.classList.add("red");
+    botSim.classList.add("red");
+    num.classList.add("red");
+  }
 };
 
 const generateRandomNumber = () => {
